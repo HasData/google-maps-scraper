@@ -9,7 +9,7 @@ This repository contains working examples of scraping **Google Maps search resul
 
 * **Selenium**
 * **Playwright (with stealth)**
-* **[HasData Google Maps API](https://hasdata.com/google-maps-api)**
+* **[HasData Google Maps API](https://hasdata.com/apis/google-maps-search-api)**
 
 in both **Python** and **Node.js**. Each method includes clean and minimal code samples with working selectors and data saving logic.
 
@@ -122,4 +122,5 @@ These examples are for **educational purposes** only. Learn more about [the lega
 
 * [How to Scrape Google Maps Data Using Python](https://hasdata.com/blog/how-to-scrape-google-maps)
 * [Join the community on Discord](https://email.hasdata.com/e/c/eyJlbWFpbF9pZCI6ImRnU2RrUWdEQVBENUF1XzVBZ0dXcXhUNGdSTk12RXZEb0pPM3UxUT0iLCJocmVmIjoiaHR0cHM6Ly9oYXNkYXRhLmNvbS9qb2luLWRpc2NvcmQiLCJpbnRlcm5hbCI6IjlkOTEwODAxYmY4ZjAxZjBmOTAyIiwibGlua19pZCI6MjMzfQ/7b95f85846853ee473b2d955c1e158190975e23eb18b11156d6df08e1f544488)
+
 * [Star this repo if helpful ⭐](#)
