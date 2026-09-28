@@ -1,5 +1,5 @@
 from playwright.sync_api import sync_playwright
-from playwright_stealth import stealth_sync
+from playwright_stealth import Stealth
 import time
 import pandas as pd
 import re
@@ -13,8 +13,8 @@ with sync_playwright() as p:
     context = browser.new_context()
     page = context.new_page()
 
-    # Enable stealth mode
-    stealth_sync(page)
+    # Enable stealth mode (playwright-stealth 2.x API)
+    Stealth().apply_stealth_sync(page)
 
     # Open Google Maps
     page.goto("https://www.google.com/maps")

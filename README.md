@@ -1,9 +1,8 @@
-![Python](https://img.shields.io/badge/python-3.10+-blue)
-![Node.js](https://img.shields.io/badge/node.js-18+-green)
-
 # Google Maps Scraper Examples (Python & Node.js)
 
-[![HasData\_bannner](banner.png)](https://hasdata.com/)
+![Python 3.10 or newer badge](https://img.shields.io/badge/python-3.10+-blue) ![Node.js 18 or newer badge](https://img.shields.io/badge/node.js-18+-green)
+
+[![HasData, the Google Maps API the API examples call](banner.png)](https://hasdata.com/)
 
 This repository contains working examples of scraping **Google Maps search results** using:
 
@@ -37,6 +36,8 @@ pip install selenium pandas playwright playwright-stealth
 playwright install
 ```
 
+The second line downloads the browsers Playwright drives.
+
 ### Node.js Setup
 
 Install required packages:
@@ -45,8 +46,11 @@ Install required packages:
 npm install selenium-webdriver playwright playwright-extra playwright-extra-plugin-stealth axios
 ```
 
+The API examples need only `axios` from that list.
 
 ## Project Structure
+
+The two folders mirror each other, one script per method.
 
 ```
 google-maps-scraper/
@@ -64,9 +68,11 @@ google-maps-scraper/
 └── README.md
 ```
 
-Each script scrapes the same data: business name, rating, reviews, category, services, image, and detail URL. Output is saved in both `.json` and `.csv`.
+Each script scrapes the same fields, business name, rating, review count, category, services, image, and detail URL. Output is saved in both `.json` and `.csv`.
 
 ## Scraper Examples
+
+Three routes to the same listings, pick by how defended your volume is.
 
 ### Selenium
 
@@ -80,6 +86,7 @@ Classic Google Maps scraping using Selenium with visible browser.
 | `max_scrolls`  | Scroll repetitions       | `10`                   |
 | `output_file`  | Output CSV/JSON filename | `"maps_data.csv/json"` |
 
+Selenium is the baseline, it breaks first when Maps changes markup.
 
 ### Playwright + Stealth
 
@@ -93,10 +100,11 @@ Runs headless or headful with stealth mode to avoid detection.
 | `max_scrolls` | Scroll repetitions       | `10`                       |
 | `output_file` | Output CSV/JSON filename | `"output.csv"`             |
 
+Stealth keeps the scroll loop alive noticeably longer than the default profile.
 
 ### HasData API
 
-Use Google Maps scraping API (by HasData) — no browser automation needed.
+Use the Google Maps scraping API by HasData, no browser automation needed.
 
 | Parameter      | Description                   | Example                        |
 | -------------- | ----------------------------- | ------------------------------ |
@@ -104,12 +112,25 @@ Use Google Maps scraping API (by HasData) — no browser automation needed.
 | `query`        | Search query                  | `"bars near San Francisco"`    |
 | `output_file`  | Output file                   | `"results.json / results.csv"` |
 
+One request returns parsed listings, so there are no selectors to maintain.
+
+### HasData Reviews Feed
+
+`hasdata_reviews_scraper` collects the full review feed of one place. Search resolves the place's `dataId`, then the reviews endpoint returns author, rating, date and text per review, saved to CSV. Verified live, a coffee-shop query returned its place and 8 reviews with full texts.
+
+| Parameter      | Description                   | Example                        |
+| -------------- | ----------------------------- | ------------------------------ |
+| `api_key`      | Your HasData API key          | `"your-key"`                   |
+| `query`        | Search query for the place    | `"coffee shop, Austin, TX"`    |
+| `output_file`  | Output CSV file               | `"reviews.csv"`                |
+
+The listing scrapers above capture the review count, this one captures the reviews themselves.
 
 ## Notes
 
-* **Selectors may change** — always verify current class names on Google Maps.
-* **Avoid rate limiting** — random delays, proxies, or API-based approach recommended.
-* **For heavy usage**, prefer HasData or your own headless proxy farm.
+* **Selectors change**, so verify current class names on Google Maps before a long run.
+* **Rate limiting** responds to random delays, proxies, or the API route.
+* **For heavy usage**, prefer the API or your own headless proxy farm.
 
 
 ## Disclaimer
@@ -120,7 +141,8 @@ These examples are for **educational purposes** only. Learn more about [the lega
 
 ## 📎 More Resources
 
-* [How to Scrape Google Maps Data Using Python](https://hasdata.com/blog/how-to-scrape-google-maps)
-* [Join the community on Discord](https://email.hasdata.com/e/c/eyJlbWFpbF9pZCI6ImRnU2RrUWdEQVBENUF1XzVBZ0dXcXhUNGdSTk12RXZEb0pPM3UxUT0iLCJocmVmIjoiaHR0cHM6Ly9oYXNkYXRhLmNvbS9qb2luLWRpc2NvcmQiLCJpbnRlcm5hbCI6IjlkOTEwODAxYmY4ZjAxZjBmOTAyIiwibGlua19pZCI6MjMzfQ/7b95f85846853ee473b2d955c1e158190975e23eb18b11156d6df08e1f544488)
+* [How to Scrape Google Maps Data Using Python](https://hasdata.com/blog/how-to-scrape-google-maps), the tutorial the listing scrapers follow
+* [How to Scrape Google Maps Reviews](https://hasdata.com/blog/scrape-google-maps-reviews), the tutorial behind the reviews feed script
+* [Join the community on Discord](https://discord.com/invite/QeuPtWpkAt)
 
 * [Star this repo if helpful ⭐](#)
