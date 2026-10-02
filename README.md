@@ -2,13 +2,13 @@
 
 ![Python 3.10 or newer badge](https://img.shields.io/badge/python-3.10+-blue) ![Node.js 18 or newer badge](https://img.shields.io/badge/node.js-18+-green)
 
-[![HasData, the Google Maps API the API examples call](banner.png)](https://hasdata.com/)
+[![HasData, the Google Maps API the API examples call](banner.png)](https://hasdata.com/?utm_source=github&utm_medium=syndication&utm_campaign=how-to-scrape-google-maps&utm_content=google-maps-scraper-readme)
 
 This repository contains working examples of scraping **Google Maps search results** using:
 
 * **Selenium**
 * **Playwright (with stealth)**
-* **[HasData Google Maps API](https://hasdata.com/apis/google-maps-search-api)**
+* **[HasData Google Maps API](https://hasdata.com/apis/google-maps-search-api?utm_source=github&utm_medium=syndication&utm_campaign=how-to-scrape-google-maps&utm_content=google-maps-scraper-readme)**
 
 in both **Python** and **Node.js**. Each method includes clean and minimal code samples with working selectors and data saving logic.
 
@@ -135,14 +135,14 @@ The listing scrapers above capture the review count, this one captures the revie
 
 ## Disclaimer
 
-These examples are for **educational purposes** only. Learn more about [the legality of web scraping](https://hasdata.com/blog/is-web-scraping-legal).
+These examples are for **educational purposes** only. Learn more about [the legality of web scraping](https://hasdata.com/blog/is-web-scraping-legal?utm_source=github&utm_medium=syndication&utm_campaign=how-to-scrape-google-maps&utm_content=google-maps-scraper-readme).
 
 
 
 ## 📎 More Resources
 
-* [How to Scrape Google Maps Data Using Python](https://hasdata.com/blog/how-to-scrape-google-maps), the tutorial the listing scrapers follow
-* [How to Scrape Google Maps Reviews](https://hasdata.com/blog/scrape-google-maps-reviews), the tutorial behind the reviews feed script
+* [How to Scrape Google Maps Data Using Python](https://hasdata.com/blog/how-to-scrape-google-maps?utm_source=github&utm_medium=syndication&utm_campaign=how-to-scrape-google-maps&utm_content=google-maps-scraper-readme), the tutorial the listing scrapers follow
+* [How to Scrape Google Maps Reviews](https://hasdata.com/blog/scrape-google-maps-reviews?utm_source=github&utm_medium=syndication&utm_campaign=how-to-scrape-google-maps&utm_content=google-maps-scraper-readme), the tutorial behind the reviews feed script
 * [Join the community on Discord](https://discord.com/invite/QeuPtWpkAt)
 
 * [Star this repo if helpful ⭐](#)
